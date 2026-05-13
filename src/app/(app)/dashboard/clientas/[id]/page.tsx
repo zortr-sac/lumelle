@@ -35,7 +35,7 @@ export default async function ClientaDetailPage({
 
   if (!customer) notFound();
 
-  const [{ data: appointments }, { data: sales }] = await Promise.all([
+  const [{ data: appointments }] = await Promise.all([
     supabase
       .from("appointments")
       .select(

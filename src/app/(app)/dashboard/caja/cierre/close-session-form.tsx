@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { formatPEN, toCents, fromCents } from "@/lib/format/currency";
+import { formatPEN, toCents } from "@/lib/format/currency";
 
 export function CloseSessionForm({ expectedCents }: { expectedCents: number }) {
   const router = useRouter();

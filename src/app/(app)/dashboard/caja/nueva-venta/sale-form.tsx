@@ -25,7 +25,6 @@ import {
   SelectContent,
   SelectItem,
 } from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
 import { formatPEN, toCents, fromCents } from "@/lib/format/currency";
 import { cn } from "@/lib/utils";
 
@@ -88,7 +87,7 @@ export function SaleForm({
   const [payments, setPayments] = useState<Payment[]>([
     { method: "cash", amountCents: 0 },
   ]);
-  const [notes, setNotes] = useState("");
+  const [notes] = useState("");
 
   const subtotal = useMemo(
     () => items.reduce((acc, it) => acc + it.qty * it.unitPriceCents, 0),
